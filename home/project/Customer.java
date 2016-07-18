@@ -5,8 +5,10 @@ package oop.home.project;
  */
 public class Customer extends Person {
 
+    private NumberCustomer currentNumber = new NumberCustomer();
     private String homeAddress;
     private String areaNeeds;
+
 
     public Customer(String name, String surname) {
         super(name, surname);
@@ -26,6 +28,10 @@ public class Customer extends Person {
 
     public String getAreaNeeds() {
         return areaNeeds;
+    }
+
+    public NumberCustomer getCurrentNumber() {
+        return currentNumber;
     }
 
     @Override
@@ -58,15 +64,15 @@ public class Customer extends Person {
 
     }
 
+
     @Override
     public String toString() {
-        return "Customer{" +
+        return "[" + currentNumber + "] " +
                 "name='" + super.getName() + '\'' +
                 ", surname='" + super.getSurname() + '\'' +
                 ", phoneNumber='" + super.getPhoneNumber() + '\'' +
                 ", eMail='" + super.getEMail() + '\'' +
                 ", cityAddress='" + super.getCityAddress() + '\'' +
-                ", areaNeeds='" + areaNeeds + '\'' +
-                '}';
+                ", areaNeeds='" + areaNeeds + '\'';
     }
 }
