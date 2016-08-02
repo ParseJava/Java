@@ -56,12 +56,12 @@ public class AgeCategoriesPersons {
     }
 
     private static List<Person> findYoungerManOlderThan(NavigableMap<Integer, List<Person>> personsMap, int age) {
-        int key = personsMap.subMap(18, 100).firstKey();
+        int key = personsMap.subMap(age, 100).firstKey();
         return personsMap.get(key);
     }
 
     private static List<Person> findOlderManYoungerThan(NavigableMap<Integer, List<Person>> personsMap, int age) {
-        int key = personsMap.subMap(12, 19).lastKey();
+        int key = personsMap.subMap(12, age + 1).lastKey();
         return personsMap.get(key);
     }
 }
