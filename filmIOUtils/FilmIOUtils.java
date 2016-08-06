@@ -36,6 +36,7 @@ public class FilmIOUtils {
             }
         } finally {
             if (writer != null) {
+                writer.flush();
                 writer.close();
             }
         }
@@ -55,7 +56,7 @@ public class FilmIOUtils {
             Film film;
             String csvString;
 
-            while ((scanner.hasNextLine()) == true) {
+            while (scanner.hasNextLine()) {
                 csvString = scanner.nextLine();
                 film = parseFilmFromCsvString(csvString);
                 result.add(film);
