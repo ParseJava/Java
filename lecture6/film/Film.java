@@ -6,8 +6,10 @@ import java.util.List;
 /**
  * @author ParseJava on 19.07.2016.
  */
-public class Film {
-
+public class Film implements Serializable{
+    
+    private static final long serialVersionUID = 9095904554224228095L;
+    
     private String filmTitle;
     private int yearOfRelease;
     private Genre genre;
