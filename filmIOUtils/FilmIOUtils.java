@@ -36,7 +36,6 @@ public class FilmIOUtils {
             }
         } finally {
             if (writer != null) {
-                writer.flush();
                 writer.close();
             }
         }
